@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name:"dark_store"
+  datasource:
+    url: jbdc:mysql://localhost:3306/dark_store
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      show-sql: true
+
