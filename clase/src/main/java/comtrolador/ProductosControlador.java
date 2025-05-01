@@ -7,20 +7,21 @@ import java.util.List;
 
 @RestController
 public class ProductosControlador {
-    private final ProductosServicio empleadoServicio;
+    private final ProductosServicio productosServicio;
 
-    public ProductosControlador(EmpleadoServicio empleadoServicio){
-        this.empleadoServicio = empleadoServicio;
+
+    public ProductosControlador(ProductosServicio productosServicio){
+        this.productosServicio = productosServicio;
     }
 
-    @GetMapping("/empleados")
-    public List<Empleado>getEmpleados(){
-        return empleadoServicio.getTodosEmpleados();
+    @GetMapping("/productos")
+    public List<Producto> getProductos(){
+        return productosServicio.getTodosProductos();
     }
 
-    @GetMapping("/empleados")
-    public List<Empleado>getEmpleadosManual(){
-        return empleadoServicio.getTodosEmpleadosManual();
+    @GetMapping("/productos/manual")
+    public List<Producto> getProductosManual(){
+        return productosServicio.getTodosProductosManual();
     }
-
 }
+

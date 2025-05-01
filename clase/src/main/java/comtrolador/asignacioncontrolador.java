@@ -7,20 +7,22 @@ import java.util.List;
 
 @RestController
 public class AsignacionControlador {
-    private final AsignacionServicio AsignacionServicio;
+    private final AsignacionServicio asignacionServicio;
 
-    public Asignasioncontrolador(AsignacionServicio asignacionServicio){
-        this .AsignacionServicio = asignacionServicio;
+
+    public AsignacionControlador(AsignacionServicio asignacionServicio){
+        this.asignacionServicio = asignacionServicio;
     }
 
-    @GetMapping ("/asignaciones")
-    public List<Asignacion>getAsignacionesmanual(){
 
+    @GetMapping("/asignaciones")
+    public List<Asignacion> getAsignaciones(){
         return asignacionServicio.getTodasAsignacionesManual();
     }
 
-    @GetMapping("/asignacionesManual")
+
+    @GetMapping("/asignaciones/manual")
     public List<Asignacion> getAsignacionesManual(){
-        return asignasionServicio.getTodasAsignacionesManual();
+        return asignacionServicio.getTodasAsignacionesManual();
     }
 }
