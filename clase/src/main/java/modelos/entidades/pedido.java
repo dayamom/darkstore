@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -17,9 +18,10 @@ import java.time.LocalDateTime;
 public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     Long id_pedidos;
     String nombre_p;
     Long fk_id_Usuarios;
     LocalDateTime fecha_pedido;
-    float total_p;
+    BigDecimal total_p;
 }
