@@ -1,12 +1,11 @@
 package servicio;
 
-import modelos.entidades.Pedido;
-import modelos.entidades.Usuario;
+import modelos.entidades.pedido;
 
 import java.util.List;
 
 public interface PedidoServicio {
 
-    List<Pedido> getAllPedidos();
+    List<pedido> getAllPedidos();
 
 }

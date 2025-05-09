@@ -1,9 +1,7 @@
 package controlador;
 
-import modelos.entidades.Pedido;
-import modelos.entidades.Usuario;
-import modelos.entidades.Pedido;
-import org.springframework.http.ResponseEntity;
+import modelos.entidades.pedido;
+import modelos.entidades.pedido;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import servicio.PedidoServicio;
@@ -22,7 +20,7 @@ public class PedidosControlador {
 
 
     @GetMapping("/pedidos/manual")
-    public List<Pedido> getPedidosManual() {
+    public List<pedido> getPedidosManual() {
         return pedidoServicio.getAllPedidos();
     }
 }

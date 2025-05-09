@@ -12,7 +12,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Producto {
+public class producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id_Productos;

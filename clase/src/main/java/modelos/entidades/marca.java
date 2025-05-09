@@ -12,7 +12,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Marca {
+public class marca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id_marca;

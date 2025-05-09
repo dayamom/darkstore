@@ -1,20 +1,22 @@
 package controlador;
 
+import modelos.entidades.marca;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import servicio.marcasServicio;
 
 import java.util.List;
 
 @RestController
 public class MarcasControlador {
-    private final MarcasServicio MarcasServicio;
+    private final marcasServicio MarcasServicio;
 
-    public MarcasControlador (MarcasServicio MarcasServisio){
+    public MarcasControlador (marcasServicio MarcasServisio){
         this.MarcasServicio = MarcasServisio;
     }
 
     @GetMapping("/Marcas/manual")
-    public List<Marcas> getMarcasManual() {
-        return MarcasServicio.getTodasMarcasManual();
+    public List<marca> getMarcasManual() {
+        return MarcasServicio.getTodasmarcaManual();
     }
 }
