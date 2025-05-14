@@ -1,6 +1,6 @@
-package servicio;
+package com.taller.servicio;
 
-import modelos.entidades.Usuario;
+import com.taller.entidades.Usuario;
 
 import java.util.List;
 

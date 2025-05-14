@@ -1,9 +1,9 @@
 package com.taller.inplementasiones;
 
-import modelos.entidades.pedido;
-import modelos.entidades.repositorio.PedidoRepositorio;
+import com.taller.entidades.Pedido;
+import com.taller.entidades.repositorio.PedidoRepositorio;
 import org.springframework.stereotype.Service;
-import servicio.PedidoServicio;
+import com.taller.servicio.PedidoServicio;
 
 import java.util.List;
 
@@ -12,13 +12,12 @@ public class PedidoImplementacionServicio implements PedidoServicio {
 
     private final PedidoRepositorio pedidoRepositorio;
 
-
     public PedidoImplementacionServicio(PedidoRepositorio pedidoRepositorio) {
         this.pedidoRepositorio = pedidoRepositorio;
     }
 
     @Override
-    public List<pedido> getAllPedidos() {
+    public List<Pedido> getAllPedidos() {
         return pedidoRepositorio.findAllPedidos();
     }
 }

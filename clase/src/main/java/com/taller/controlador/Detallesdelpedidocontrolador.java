@@ -1,9 +1,9 @@
-package controlador;
+package com.taller.controlador;
 
-import modelos.entidades.Detallesdelpedido;
+import com.taller.entidades.Detallesdelpedido;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import servicio.DetallesdelpedidoServicio;
+import com.taller.servicio.DetallesdelpedidoServicio;
 
 import java.util.List;
 @RestController

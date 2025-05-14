@@ -1,15 +1,14 @@
-package modelos.entidades.repositorio;
+package com.taller.entidades.repositorio;
 
-import modelos.entidades.pedido;
+import com.taller.entidades.Pedido;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface PedidoRepositorio extends JpaRepository<pedido, Long> {
-
+public interface PedidoRepositorio extends JpaRepository<Pedido, Long> {
 
     @Query(value = "SELECT * FROM pedidos", nativeQuery = true)
-    List<pedido> findAllPedidos();
-
+    List<Pedido> findAllPedidos();
 }
+

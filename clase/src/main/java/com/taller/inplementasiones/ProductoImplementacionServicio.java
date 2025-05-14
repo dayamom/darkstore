@@ -1,16 +1,16 @@
 package com.taller.inplementasiones;
 
-import modelos.entidades.producto;
+import com.taller.entidades.Producto;
 
-import modelos.entidades.repositorio.ProdutosRepositorio;
+import com.taller.entidades.repositorio.ProdutosRepositorio;
 import org.springframework.stereotype.Service;
 
-import servicio.productoServicio;
+import com.taller.servicio.ProductoServicio;
 
 import java.util.List;
 
 @Service
-public class ProductoImplementacionServicio implements productoServicio {
+public class ProductoImplementacionServicio implements ProductoServicio {
 
     private final ProdutosRepositorio productosRepositorio;
 
@@ -19,7 +19,7 @@ public class ProductoImplementacionServicio implements productoServicio {
     }
 
     @Override
-    public List<producto> getAllProductos() {
+    public List<Producto> getAllProductos() {
         return productosRepositorio.findAll();
     }
 }

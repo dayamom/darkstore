@@ -1,10 +1,9 @@
-package controlador;
+package com.taller.controlador;
 
-import modelos.entidades.pedido;
-import modelos.entidades.pedido;
+import com.taller.entidades.Pedido;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import servicio.PedidoServicio;
+import com.taller.servicio.PedidoServicio;
 
 import java.util.List;
 
@@ -13,14 +12,12 @@ public class PedidosControlador {
 
     private final PedidoServicio pedidoServicio;
 
-
     public PedidosControlador(PedidoServicio pedidoServicio) {
         this.pedidoServicio = pedidoServicio;
     }
 
-
     @GetMapping("/pedidos/manual")
-    public List<pedido> getPedidosManual() {
+    public List<Pedido> getPedidosManual() {
         return pedidoServicio.getAllPedidos();
     }
 }

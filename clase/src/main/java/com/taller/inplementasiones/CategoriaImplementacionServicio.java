@@ -1,25 +1,24 @@
 package com.taller.inplementasiones;
 
-import modelos.entidades.Categoria;
-import modelos.entidades.pedido;
-import modelos.entidades.repositorio.CategoriaRepositorio;
-import modelos.entidades.repositorio.PedidoRepositorio;
-import servicio.PedidoServicio;
-import servicio.categoriaServicio;
+import com.taller.entidades.Categoria;
+import com.taller.entidades.repositorio.CategoriaRepositorio;
+import com.taller.servicio.CategoriasServicio;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+@Service
+public class CategoriaImplementacionServicio implements CategoriasServicio {
 
-public class CategoriaImplementacionServicio implements categoriaServicio {
+    private final CategoriaRepositorio categoriaRepositorio;
 
-    private final CategoriaRepositorio CategoriaRepositorio;
-
-
-    public CategoriaImplementacionServicio(CategoriaRepositorio CategoriaRepositorio) {
-        this.CategoriaRepositorio = CategoriaRepositorio;
+    public CategoriaImplementacionServicio(CategoriaRepositorio categoriaRepositorio) {
+        this.categoriaRepositorio = categoriaRepositorio;
     }
 
     @Override
-    public List<Categoria> getAllCategoria() {
-        return CategoriaRepositorio.findAllCategoria();
+    public List<Categoria> getTodasCategoriasManual() {
+        return categoriaRepositorio.findAllCategoriasManual();
     }
 }
+
+

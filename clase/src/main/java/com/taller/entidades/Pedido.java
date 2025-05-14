@@ -1,4 +1,4 @@
-package modelos.entidades;
+package com.taller.entidades;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,21 +6,23 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 @Entity
-@Table(name = "detallesdelpedido")
-@Setter
+@Table(name = "pedidos")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Detallesdelpedido {
+public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id_Detallesdelpedido;
+    Long id_pedidos;
+
     String nombre_p;
-    Long fk_id_Pedido;
-    Long fk_id_Producto;
-    Long Cantidad;
-    float Precio_Unitario;
-    float Subtotal;
+    Long fk_id_Usuarios;
+    LocalDateTime fecha_pedido;
+    BigDecimal total_p;
 }

@@ -1,13 +1,14 @@
 package com.taller.inplementasiones;
 
-import modelos.entidades.Detallesdelpedido;
-import modelos.entidades.repositorio.DetallesdelpedidoRepositorio;
+import com.taller.entidades.Detallesdelpedido;
+import com.taller.entidades.repositorio.DetallesdelpedidoRepositorio;
 import org.springframework.stereotype.Service;
-import servicio.DetallesdelpedidoServicio;
+import com.taller.servicio.DetallesdelpedidoServicio;
 
 import java.util.List;
+
 @Service
-public abstract class DetallesdelpedidoImplementacionServicio implements DetallesdelpedidoServicio {
+public class DetallesdelpedidoImplementacionServicio implements DetallesdelpedidoServicio {
 
     private final DetallesdelpedidoRepositorio detallesdelpedidoRepositorio;
 

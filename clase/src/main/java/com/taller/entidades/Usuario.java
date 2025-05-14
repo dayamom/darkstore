@@ -1,4 +1,5 @@
-package modelos.entidades;
+package com.taller.entidades;
+
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,20 +7,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
-@Table(name = "categorias")
+@Table(name = "usuarios")
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class Categoria {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_categoria")
-    Long id_categoria;
-    @Column(name = "categoria_c")
-    Long categoria_c;
+    Long id_usuario;
+    String Nombre_u;
+    String Direcion_u;
+    String Email_u;
+    String telefono_u;
 
-    }
+}

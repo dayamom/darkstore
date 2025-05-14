@@ -1,10 +1,9 @@
 package com.taller.inplementasiones;
 
-import modelos.entidades.Usuario;
-import modelos.entidades.repositorio.UsuarioRepositorio;
-import org.springframework.stereotype.Component;
+import com.taller.entidades.Usuario;
+import com.taller.entidades.repositorio.UsuarioRepositorio;
 import org.springframework.stereotype.Service;
-import servicio.UsuarioServicio;
+import com.taller.servicio.UsuarioServicio;
 
 import java.util.List;
 
