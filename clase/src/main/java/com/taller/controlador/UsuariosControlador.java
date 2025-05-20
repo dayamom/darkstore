@@ -10,14 +10,15 @@ import java.util.List;
 @RestController
 public class UsuariosControlador {
 
-    private final UsuarioServicio UsuarioServicio;
+    private final UsuarioServicio usuarioServicio;
 
-    public UsuariosControlador(UsuarioServicio UsuarioServicio) {
-        this.UsuarioServicio = UsuarioServicio;
+    public UsuariosControlador(UsuarioServicio usuarioServicio) {
+        this.usuarioServicio = usuarioServicio;
     }
+
 
     @GetMapping("/usuarios/manual")
     public List<Usuario> getUsuariosManual() {
-        return UsuarioServicio.getTodasUsuarioManual();
+        return usuarioServicio.getTodasUsuarioManual();
     }
 }

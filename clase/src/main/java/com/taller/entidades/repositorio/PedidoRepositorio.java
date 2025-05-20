@@ -11,4 +11,3 @@ public interface PedidoRepositorio extends JpaRepository<Pedido, Long> {
     @Query(value = "SELECT * FROM pedidos", nativeQuery = true)
     List<Pedido> findAllPedidos();
 }
-

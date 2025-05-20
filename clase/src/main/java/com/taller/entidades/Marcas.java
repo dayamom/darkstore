@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Marcas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id_marca;
-    String nombre_marca;
+    private Long id_marca;
+    private String nombre_marca;
 
 }

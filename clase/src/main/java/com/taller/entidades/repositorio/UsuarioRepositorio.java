@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {
 
-    @Query(value = "SELECT * FROM usuarios WHERE id = 10", nativeQuery = true)
+    @Query(value = "SELECT * FROM usuarios", nativeQuery = true)
     List<Usuario> traerTodo();
+
 }

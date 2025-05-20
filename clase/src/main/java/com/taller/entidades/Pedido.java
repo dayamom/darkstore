@@ -9,6 +9,7 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+
 @Entity
 @Table(name = "pedidos")
 @Getter
@@ -19,10 +20,8 @@ public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id_pedidos;
-
-    String nombre_p;
-    Long fk_id_Usuarios;
-    LocalDateTime fecha_pedido;
-    BigDecimal total_p;
+    private Long id_pedidos;
+    private Long fk_id_Usuarios;
+    private LocalDateTime fecha_pedido;
+    private BigDecimal total_p;
 }
