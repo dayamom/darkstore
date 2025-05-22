@@ -19,6 +19,23 @@ public class CategoriaImplementacionServicio implements CategoriasServicio {
     public List<Categoria> getTodasCategoriasManual() {
         return categoriaRepositorio.findAllCategoriasManual();
     }
+
+    @Override
+    public Categoria crearCategoria(Categoria categoria) {
+        return categoriaRepositorio.save(categoria);
+    }
+
+    @Override
+    public Categoria actualizarCategoria(long id, Categoria categoria) {
+        Categoria existente = categoriaRepositorio.findById(id)
+                .orElseThrow(() -> new RuntimeException("Categoría no encontrada"));
+
+        existente.setCategoria(categoria.getCategoria());
+        return categoriaRepositorio.save(existente);
+    }
+
+    @Override
+    public void eliminarCategoria(long id) {
+        categoriaRepositorio.deleteById(id);
+    }
 }
-
-
